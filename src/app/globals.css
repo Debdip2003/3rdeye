@@ -3,77 +3,108 @@
 
 @custom-variant dark (&:is(.dark *));
 
+/* Deep Ocean & Sunset Color Palette */
 :root {
-  /* Updated color tokens to match the dark neon PPT design */
-  --background: oklch(0.11 0.02 260); /* Dark navy background like PPT */
-  --foreground: oklch(0.98 0 0); /* White text */
-  --card: oklch(0.15 0.02 260); /* Slightly lighter dark card */
-  --card-foreground: oklch(0.98 0 0); /* White card text */
-  --popover: oklch(0.15 0.02 260); /* Dark popover */
-  --popover-foreground: oklch(0.98 0 0); /* White popover text */
-  --primary: oklch(0.65 0.2 195); /* Bright cyan like PPT */
-  --primary-foreground: oklch(0.11 0.02 260); /* Dark text on primary */
-  --secondary: oklch(0.65 0.25 330); /* Bright magenta/pink like PPT */
-  --secondary-foreground: oklch(0.98 0 0); /* White text on secondary */
-  --muted: oklch(0.2 0.02 260); /* Muted dark */
-  --muted-foreground: oklch(0.7 0 0); /* Light gray muted text */
-  --accent: oklch(0.7 0.15 45); /* Orange accent for "eye" */
-  --accent-foreground: oklch(0.11 0.02 260); /* Dark text on accent */
-  --destructive: oklch(0.577 0.245 27.325);
-  --destructive-foreground: oklch(1 0 0);
-  --border: oklch(0.25 0.05 260); /* Subtle neon border */
-  --input: oklch(0.15 0.02 260); /* Dark input background */
-  --ring: oklch(0.65 0.2 195 / 0.5); /* Cyan ring with transparency */
-  --chart-1: oklch(0.65 0.2 195); /* Cyan for charts */
-  --chart-2: oklch(0.65 0.25 330); /* Magenta for charts */
-  --chart-3: oklch(0.7 0.15 45); /* Orange for charts */
-  --chart-4: oklch(0.98 0 0); /* White for charts */
-  --chart-5: oklch(0.577 0.245 27.325); /* Red for charts */
-  --radius: 0.75rem;
-  --sidebar: oklch(0.15 0.02 260);
-  --sidebar-foreground: oklch(0.98 0 0);
-  --sidebar-primary: oklch(0.65 0.2 195);
-  --sidebar-primary-foreground: oklch(0.11 0.02 260);
-  --sidebar-accent: oklch(0.65 0.25 330);
-  --sidebar-accent-foreground: oklch(0.98 0 0);
-  --sidebar-border: oklch(0.25 0.05 260);
-  --sidebar-ring: oklch(0.65 0.2 195 / 0.5);
+  --background: hsl(220, 20%, 10%); /* Deep Navy */
+  --foreground: hsl(40, 100%, 95%); /* Soft Cream */
+
+  --card: hsl(220, 18%, 15%); /* Slightly lighter navy for cards */
+  --card-foreground: hsl(40, 100%, 95%);
+
+  --popover: hsl(220, 18%, 15%);
+  --popover-foreground: hsl(40, 100%, 95%);
+
+  --primary: hsl(15, 80%, 60%); /* Sunset Orange */
+  --primary-foreground: hsl(220, 20%, 10%);
+
+  --secondary: hsl(200, 70%, 55%); /* Ocean Blue */
+  --secondary-foreground: hsl(220, 20%, 10%);
+
+  --muted: hsl(220, 10%, 25%); /* Muted dark tone */
+  --muted-foreground: hsl(40, 20%, 70%);
+
+  --accent: hsl(40, 90%, 65%); /* Goldenrod */
+  --accent-foreground: hsl(220, 20%, 10%);
+
+  --destructive: hsl(0, 70%, 50%); /* Classic Red */
+  --destructive-foreground: hsl(40, 100%, 95%);
+
+  --border: hsl(220, 15%, 30%);
+  --input: hsl(220, 18%, 15%);
+  --ring: hsl(15, 80%, 60%);
+
+  --chart-1: hsl(15, 80%, 60%);
+  --chart-2: hsl(200, 70%, 55%);
+  --chart-3: hsl(40, 90%, 65%);
+  --chart-4: hsl(280, 50%, 70%); /* Lavender */
+  --chart-5: hsl(120, 40%, 60%); /* Jade Green */
+
+  --radius: 0.75rem; /* Slightly rounded corners */
+
+  /* Enhanced Shadows for depth */
+  --shadow-sm: 0 1px 2px hsla(220, 20%, 5%, 0.4);
+  --shadow-md: 0 4px 6px hsla(220, 20%, 5%, 0.4),
+    0 1px 3px hsla(220, 20%, 5%, 0.2);
+  --shadow-lg: 0 10px 15px hsla(220, 20%, 5%, 0.4),
+    0 4px 6px hsla(220, 20%, 5%, 0.2);
+
+  /* Gradients for modern feel */
+  --gradient-primary: linear-gradient(
+    to right,
+    hsl(15, 80%, 60%),
+    hsl(40, 90%, 65%)
+  );
+  --gradient-secondary: linear-gradient(
+    to right,
+    hsl(200, 70%, 55%),
+    hsl(190, 60%, 50%)
+  );
+
+  --sidebar: hsl(220, 18%, 15%);
+  --sidebar-foreground: hsl(40, 100%, 95%);
+  --sidebar-primary: hsl(15, 80%, 60%);
+  --sidebar-primary-foreground: hsl(220, 20%, 10%);
+  --sidebar-accent: hsl(200, 70%, 55%);
+  --sidebar-accent-foreground: hsl(220, 20%, 10%);
+  --sidebar-border: hsl(220, 15%, 30%);
+  --sidebar-ring: hsl(15, 80%, 60%);
 }
 
 .dark {
-  /* Dark mode uses same colors as light mode for consistent neon theme */
-  --background: oklch(0.11 0.02 260);
-  --foreground: oklch(0.98 0 0);
-  --card: oklch(0.15 0.02 260);
-  --card-foreground: oklch(0.98 0 0);
-  --popover: oklch(0.15 0.02 260);
-  --popover-foreground: oklch(0.98 0 0);
-  --primary: oklch(0.65 0.2 195);
-  --primary-foreground: oklch(0.11 0.02 260);
-  --secondary: oklch(0.65 0.25 330);
-  --secondary-foreground: oklch(0.98 0 0);
-  --muted: oklch(0.2 0.02 260);
-  --muted-foreground: oklch(0.7 0 0);
-  --accent: oklch(0.7 0.15 45);
-  --accent-foreground: oklch(0.11 0.02 260);
-  --destructive: oklch(0.577 0.245 27.325);
-  --destructive-foreground: oklch(1 0 0);
-  --border: oklch(0.25 0.05 260);
-  --input: oklch(0.15 0.02 260);
-  --ring: oklch(0.65 0.2 195 / 0.5);
-  --chart-1: oklch(0.65 0.2 195);
-  --chart-2: oklch(0.65 0.25 330);
-  --chart-3: oklch(0.7 0.15 45);
-  --chart-4: oklch(0.98 0 0);
-  --chart-5: oklch(0.577 0.245 27.325);
-  --sidebar: oklch(0.15 0.02 260);
-  --sidebar-foreground: oklch(0.98 0 0);
-  --sidebar-primary: oklch(0.65 0.2 195);
-  --sidebar-primary-foreground: oklch(0.11 0.02 260);
-  --sidebar-accent: oklch(0.65 0.25 330);
-  --sidebar-accent-foreground: oklch(0.98 0 0);
-  --sidebar-border: oklch(0.25 0.05 260);
-  --sidebar-ring: oklch(0.65 0.2 195 / 0.5);
+  --background: hsl(220, 20%, 10%);
+  --foreground: hsl(40, 100%, 95%);
+
+  --card: hsl(220, 18%, 15%);
+  --card-foreground: hsl(40, 100%, 95%);
+
+  --popover: hsl(220, 18%, 15%);
+  --popover-foreground: hsl(40, 100%, 95%);
+  --primary: hsl(15, 80%, 60%);
+  --primary-foreground: hsl(220, 20%, 10%);
+  --secondary: hsl(200, 70%, 55%);
+  --secondary-foreground: hsl(220, 20%, 10%);
+  --muted: hsl(220, 10%, 25%);
+  --muted-foreground: hsl(40, 20%, 70%);
+  --accent: hsl(40, 90%, 65%);
+  --accent-foreground: hsl(220, 20%, 10%);
+  --destructive: hsl(0, 70%, 50%);
+  --destructive-foreground: hsl(40, 100%, 95%);
+  --border: hsl(220, 15%, 30%);
+  --input: hsl(220, 18%, 15%);
+  --ring: hsl(15, 80%, 60%);
+  --chart-1: hsl(15, 80%, 60%);
+  --chart-2: hsl(200, 70%, 55%);
+  --chart-3: hsl(40, 90%, 65%);
+  --chart-4: hsl(280, 50%, 70%);
+  --chart-5: hsl(120, 40%, 60%);
+  --sidebar: hsl(220, 18%, 15%);
+  --sidebar-foreground: hsl(40, 100%, 95%);
+  --sidebar-primary: hsl(15, 80%, 60%);
+  --sidebar-primary-foreground: hsl(220, 20%, 10%);
+  --sidebar-accent: hsl(200, 70%, 55%);
+  --sidebar-accent-foreground: hsl(220, 20%, 10%);
+  --sidebar-border: hsl(220, 15%, 30%);
+  --sidebar-ring: hsl(15, 80%, 60%);
 }
 
 @theme inline {
@@ -121,16 +152,41 @@
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans antialiased; /* Added font-sans and antialiased */
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply text-foreground font-bold; /* Ensure headings are vibrant */
+  }
+
+  a {
+    @apply text-primary hover:text-primary-foreground transition-colors duration-200; /* Primary color for links */
   }
 }
 
-/* Added custom animations for landing page */
-@keyframes fadeInUp {
+/* Modern & Professional Animations (replacing neon glow) */
+@keyframes fadeInScale {
   from {
     opacity: 0;
-    transform: translateY(30px);
+    transform: scale(0.95) translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes slideInFromTop {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
   }
   to {
     opacity: 1;
@@ -138,77 +194,51 @@
   }
 }
 
-@keyframes slideInLeft {
-  from {
-    opacity: 0;
-    transform: translateX(-30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes pulse-glow {
+@keyframes subtlePulse {
   0%,
   100% {
-    box-shadow: 0 0 20px oklch(0.65 0.2 195 / 0.4),
-      0 0 40px oklch(0.65 0.25 330 / 0.2);
+    transform: scale(1);
+    box-shadow: 0 0 0px hsla(var(--primary), 0.7);
   }
   50% {
-    box-shadow: 0 0 30px oklch(0.65 0.2 195 / 0.6),
-      0 0 60px oklch(0.65 0.25 330 / 0.4);
+    transform: scale(1.01);
+    box-shadow: 0 0 15px hsla(var(--primary), 0.9);
   }
 }
 
-@keyframes neon-border {
-  0%,
-  100% {
-    border-color: oklch(0.65 0.2 195 / 0.5);
-    box-shadow: 0 0 10px oklch(0.65 0.2 195 / 0.3);
-  }
-  50% {
-    border-color: oklch(0.65 0.25 330 / 0.7);
-    box-shadow: 0 0 20px oklch(0.65 0.25 330 / 0.5);
-  }
+/* Utility for Glassmorphism Effect */
+.glassmorphism {
+  background: hsla(220, 15%, 20%, 0.6); /* Semi-transparent dark background */
+  backdrop-filter: blur(10px);
+  border: 1px solid hsla(220, 15%, 40%, 0.3);
+  box-shadow: var(--shadow-md);
+  border-radius: var(--radius);
 }
 
-.animate-fade-in-up {
-  animation: fadeInUp 0.8s ease-out;
+/* Applying new animations */
+.animate-fade-in-scale {
+  animation: fadeInScale 0.6s ease-out forwards;
 }
 
-.animate-slide-in-left {
-  animation: slideInLeft 0.8s ease-out;
+.animate-slide-in-top {
+  animation: slideInFromTop 0.7s ease-out forwards;
 }
 
-.animate-pulse-glow {
-  animation: pulse-glow 2s ease-in-out infinite;
+.animate-subtle-pulse {
+  animation: subtlePulse 2s ease-in-out infinite;
 }
 
-.animate-neon-border {
-  animation: neon-border 3s ease-in-out infinite;
+/* Gradient text utility */
+.text-gradient-primary {
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-/* Added neon glow utilities */
-.neon-glow-cyan {
-  box-shadow: 0 0 20px oklch(0.65 0.2 195 / 0.5);
-}
-
-.neon-glow-magenta {
-  box-shadow: 0 0 20px oklch(0.65 0.25 330 / 0.5);
-}
-
-.text-neon-cyan {
-  color: oklch(0.65 0.2 195);
-  text-shadow: 0 0 10px oklch(0.65 0.2 195 / 0.5);
-}
-
-.text-neon-magenta {
-  color: oklch(0.65 0.25 330);
-  text-shadow: 0 0 10px oklch(0.65 0.25 330 / 0.5);
-}
-
-.text-neon-orange {
-  color: oklch(0.7 0.15 45);
-  text-shadow: 0 0 10px oklch(0.7 0.15 45 / 0.5);
+.text-gradient-secondary {
+  background: var(--gradient-secondary);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
