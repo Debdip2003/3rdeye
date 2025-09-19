@@ -217,11 +217,11 @@
 
 /* Applying new animations */
 .animate-fade-in-scale {
-  animation: fadeInScale 0.6s ease-out forwards;
+  animation: fadeInScale 1s ease-out forwards;
 }
 
 .animate-slide-in-top {
-  animation: slideInFromTop 0.7s ease-out forwards;
+  animation: slideInFromTop 1s ease-out forwards;
 }
 
 .animate-subtle-pulse {

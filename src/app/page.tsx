@@ -37,7 +37,6 @@ import {
   MapPin,
   Target,
   Building2,
-  Eye,
   Monitor,
   Laptop,
   PhoneCall,
@@ -45,11 +44,15 @@ import {
   TrendingUp,
   Shield,
   Clock,
+  LoaderPinwheel,
+  Bike,
+  Home,
 } from "lucide-react";
 import purnandu from "../assets/purnandusensarma.jpg";
 import moumita from "../assets/moumitasensarma.jpg";
 import barsha from "../assets/barshaprasad.jpg";
 import saurav from "../assets/souravsingh.jpg";
+import logo from "../assets/logo.png";
 
 export default function LandingPage() {
   const [isVisible, setIsVisible] = useState(false);
@@ -74,10 +77,10 @@ export default function LandingPage() {
           if (entry.isIntersecting) {
             const el = entry.target as HTMLElement;
             // optional delay per element via data-reveal-delay (ms)
-            const delay = el.dataset.revealDelay;
-            if (delay) {
-              el.style.transitionDelay = `${delay}ms`;
-            }
+            const delayAttr = el.dataset.revealDelay;
+            const baseDelayMs = 150; // base delay for all reveal animations
+            const extraDelayMs = delayAttr ? parseInt(delayAttr, 10) || 0 : 0;
+            el.style.transitionDelay = `${baseDelayMs + extraDelayMs}ms`;
             // ensure transition is set if not provided by utility classes
             if (!el.style.transition) {
               el.style.transition = "transform 700ms ease, opacity 700ms ease";
@@ -234,6 +237,21 @@ export default function LandingPage() {
       description:
         "Comprehensive credit card debt recovery through combined field and telecalling approaches",
     },
+    {
+      icon: <LoaderPinwheel className="h-8 w-8" />,
+      title: "Personal Loan Recovery",
+      description: "Any type of unsecured in NPA and Recovery collection",
+    },
+    {
+      icon: <Bike className="h-8 w-8" />,
+      title: "Two Wheeler Recovery",
+      description: "Secured recovery collection",
+    },
+    {
+      icon: <Home className="h-8 w-8" />,
+      title: "Home Loan Recovery",
+      description: "Specialist in secured recovery with legal experts",
+    },
   ];
 
   return (
@@ -269,13 +287,24 @@ export default function LandingPage() {
               isVisible ? "animate-fade-in-scale" : "opacity-0"
             }`}
           >
+            <div className="mx-auto mb-6 sm:mb-8 md:mb-10"></div>
             <Badge className="mb-6 bg-primary text-primary-foreground border-0 text-lg px-6 py-3 font-semibold shadow-lg">
               Established February 2022
             </Badge>
             <h1 className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold mb-6 sm:mb-8 text-balance break-words drop-shadow-[0_4px_18px_rgba(0,0,0,0.45)]">
-              <span>3rd</span>
-              <span className="text-gradient-primary">eye</span>
-              <span> Debt Management Service</span>
+              <span className="inline-flex items-center gap-2 sm:gap-3 align-middle">
+                <Image
+                  src={logo}
+                  alt="3rd eye logo"
+                  width={48}
+                  height={48}
+                  className="w-[0.95em] h-[0.95em] align-middle object-contain rounded-md shadow-md"
+                  priority
+                />
+                <span>3rd</span>
+                <span className="text-gradient-primary">eye</span>
+              </span>
+              <span className="block mt-2">Debt Management Service</span>
             </h1>
             <div className="mb-6 sm:mb-8 md:mb-12 max-w-2xl sm:max-w-4xl mx-auto animate-slide-in-top">
               <BlurText
@@ -323,17 +352,19 @@ export default function LandingPage() {
             {services.map((service) => (
               <Card
                 key={service.title}
-                className="bg-card text-card-foreground border-0 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 hover:scale-[1.02] text-center ring-1 ring-transparent hover:ring-primary/30 reveal-on-scroll opacity-0 translate-y-6"
+                className="bg-card text-card-foreground border-0 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 hover:scale-[1.02] text-center ring-1 ring-transparent hover:ring-primary/30 reveal-on-scroll opacity-0 translate-y-6 h-full flex flex-col"
               >
                 <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary via-accent to-secondary" />
 
-                <CardHeader>
+                <CardHeader className="items-center">
                   <div className="mx-auto mb-4 text-secondary bg-secondary/10 p-4 rounded-full">
                     {service.icon}
                   </div>
-                  <CardTitle className="text-xl">{service.title}</CardTitle>
+                  <CardTitle className="text-2xl font-bold text-primary animate-pulse drop-shadow-[0_0_8px_rgba(255,255,255,0.6)]">
+                    {service.title}
+                  </CardTitle>
                 </CardHeader>
-                <CardContent>
+                <CardContent className="flex-1 flex items-center">
                   <p className="text-muted-foreground leading-relaxed">
                     {service.description}
                   </p>
@@ -380,7 +411,8 @@ export default function LandingPage() {
                       Corporate Office:
                     </p>
                     <p className="text-muted-foreground text-sm sm:text-base">
-                      169, Rajdanga Main Road, Kolkata- 700107
+                      169, Rajdanga Main Road, 3rd Floor, Near Motherhood
+                      Hospital, Kolkata- 700107
                     </p>
                   </div>
                   <div>
@@ -415,6 +447,12 @@ export default function LandingPage() {
                     <Mail className="h-4 w-4 sm:h-5 sm:w-5 text-muted-foreground flex-shrink-0" />
                     <span className="text-sm sm:text-base break-all">
                       3rdeyedebtmanagementservice@gmail.com
+                    </span>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <Mail className="h-4 w-4 sm:h-5 sm:w-5 text-muted-foreground flex-shrink-0" />
+                    <span className="text-sm sm:text-base break-all">
+                      response.3edms.ss@gmail.com
                     </span>
                   </div>
                 </CardContent>
@@ -645,11 +683,24 @@ export default function LandingPage() {
                     </div>
                     <div>
                       <h4 className="text-base sm:text-lg md:text-xl font-semibold">
-                        Call Systems
+                        Auto Dialer
                       </h4>
                       <p className="text-muted-foreground text-sm sm:text-base">
-                        6 call recording units and 1 dedicated auto-dialer
+                        2 dedicated auto-dialer with 32 ports each
                       </p>
+                    </div>
+                  </div>
+                  <div
+                    className="flex items-center space-x-3 sm:space-x-4 bg-card p-4 sm:p-6 rounded-lg shadow-md reveal-on-scroll opacity-0 translate-y-6 transition-all duration-700"
+                    data-reveal-delay="200"
+                  >
+                    <div className="bg-primary p-2 sm:p-3 rounded-full flex-shrink-0">
+                      <Shield className="h-6 w-6 sm:h-8 sm:w-8 text-primary-foreground" />
+                    </div>
+                    <div>
+                      <h4 className="text-base sm:text-lg md:text-xl font-semibold">
+                        Static IP
+                      </h4>
                     </div>
                   </div>
                 </div>
@@ -692,14 +743,25 @@ export default function LandingPage() {
                     </p>
                   </div>
                 </div>
-                <div className="text-center bg-white/10 p-3 sm:p-4 md:p-6 rounded-lg">
-                  <PhoneCall className="h-12 w-12 sm:h-14 sm:w-14 md:h-16 md:w-16 text-primary-foreground mx-auto mb-2 sm:mb-3 md:mb-4" />
-                  <p className="text-xl sm:text-2xl md:text-3xl font-bold">
-                    7+
-                  </p>
-                  <p className="text-white/80 text-xs sm:text-sm md:text-base">
-                    Call Systems
-                  </p>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 md:gap-8">
+                  <div className="text-center bg-white/10 p-3 sm:p-4 md:p-6 rounded-lg">
+                    <PhoneCall className="h-12 w-12 sm:h-14 sm:w-14 md:h-16 md:w-16 text-primary-foreground mx-auto mb-2 sm:mb-3 md:mb-4" />
+                    <p className="text-xl sm:text-2xl md:text-3xl font-bold">
+                      30+
+                    </p>
+                    <p className="text-white/80 text-xs sm:text-sm md:text-base">
+                      Call Systems
+                    </p>
+                  </div>
+                  <div className="text-center bg-white/10 p-3 sm:p-4 md:p-6 rounded-lg">
+                    <Shield className="h-12 w-12 sm:h-14 sm:w-14 md:h-16 md:w-16 text-primary-foreground mx-auto mb-2 sm:mb-3 md:mb-4" />
+                    <p className="text-xl sm:text-2xl md:text-3xl font-bold">
+                      2+
+                    </p>
+                    <p className="text-white/80 text-xs sm:text-sm md:text-base">
+                      Automatic Dialer
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -734,10 +796,10 @@ export default function LandingPage() {
                 </CardHeader>
                 <CardContent className="p-4 sm:p-6 pt-0">
                   <p className="text-sm sm:text-base md:text-lg">
-                    169, Rajdanga Main Road
+                    169, Rajdanga Main Road, 3rd Floor
                   </p>
                   <p className="text-sm sm:text-base md:text-lg">
-                    Kolkata - 700107
+                    Near Motherhood Hospital, Kolkata - 700107
                   </p>
                 </CardContent>
               </Card>
@@ -782,6 +844,15 @@ export default function LandingPage() {
                     3rdeyedebtmanagementservice@gmail.com
                   </span>
                 </Button>
+                <Button
+                  size="lg"
+                  className="text-base sm:text-lg md:text-xl px-6 sm:px-8 md:px-10 py-4 sm:py-5 md:py-6 w-full sm:w-auto bg-card text-primary hover:bg-card/90 shadow-xl border-0"
+                >
+                  <Mail className="mr-2 sm:mr-3 h-5 w-5 sm:h-6 sm:w-6" />
+                  <span className="break-all text-xs sm:text-sm md:text-base">
+                    response.3edms.ss@gmail.com
+                  </span>
+                </Button>
               </div>
             </div>
           </div>
@@ -793,7 +864,13 @@ export default function LandingPage() {
         <div className="container mx-auto px-2 sm:px-4 text-center">
           <div className="flex flex-col sm:flex-row items-center justify-center space-y-2 sm:space-y-0 sm:space-x-3 mb-4 sm:mb-6">
             <div className="bg-primary p-2 rounded-full">
-              <Eye className="h-6 w-6 sm:h-8 sm:w-8 text-primary-foreground" />
+              <Image
+                src={logo}
+                alt="3rd eye logo"
+                width={32}
+                height={32}
+                className="h-6 w-6 sm:h-8 sm:w-8 object-contain rounded"
+              />
             </div>
             <span className="text-xl sm:text-2xl md:text-3xl font-bold">
               <span>3rd</span>
