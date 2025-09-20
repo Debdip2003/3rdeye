@@ -180,11 +180,11 @@ export default function LandingPage() {
   const leadership = [
     {
       name: "Purnendu Sen Sarma",
-      role: "Team Coordinator",
+      role: "Founder",
       image: purnandu,
       phoneNumber: "+91 9830548111",
       experience:
-        "5+ years of industry expertise in operations and collections management. Specializes in strategic planning and client relationship development.",
+        "25+ years of industry expertise in operations and collections management. Specializes in strategic planning and client relationship development.",
     },
     {
       name: "Moumita Sen Sarma",
