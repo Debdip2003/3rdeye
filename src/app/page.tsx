@@ -375,7 +375,7 @@ export default function LandingPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
-      <div className="min-h-screen bg-background text-foreground">
+      <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
         {/* Hero Section */}
         <header
           ref={heroRef}
@@ -400,7 +400,7 @@ export default function LandingPage() {
           <div className="absolute -top-32 -left-24 h-96 w-96 bg-primary/30 blur-3xl rounded-full z-10 pointer-events-none"></div>
           <div className="absolute -bottom-24 -right-24 h-[28rem] w-[28rem] bg-secondary/30 blur-3xl rounded-full z-10 pointer-events-none"></div>
           <div className="absolute inset-0 z-20 pointer-events-none bg-[radial-gradient(ellipse_at_center,rgba(0,0,0,0.55)_0%,rgba(0,0,0,0.35)_40%,rgba(0,0,0,0.0)_70%)]"></div>
-          <div className="container mx-auto px-2 sm:px-4 text-center relative z-30">
+          <div className="container mx-auto px-2 sm:px-4 text-center relative z-30 max-w-full">
             <div
               ref={heroContentRef}
               className={`transition-all duration-1000 ${
@@ -411,7 +411,7 @@ export default function LandingPage() {
               <Badge className="mb-6 bg-primary text-primary-foreground border-0 text-lg px-6 py-3 font-semibold shadow-lg">
                 Established February 2022
               </Badge>
-              <h1 className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold mb-6 sm:mb-8 text-balance break-words drop-shadow-[0_4px_18px_rgba(0,0,0,0.45)]">
+              <h1 className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold mb-6 sm:mb-8 text-balance break-words drop-shadow-[0_4px_18px_rgba(0,0,0,0.45)] max-w-full">
                 <span className="inline-flex items-center gap-2 sm:gap-3 align-middle">
                   <Image
                     src={logo}
