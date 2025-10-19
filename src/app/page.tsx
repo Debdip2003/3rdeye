@@ -53,6 +53,9 @@ import moumita from "../assets/moumitasensarma.jpg";
 import barsha from "../assets/barshaprasad.jpg";
 import saurav from "../assets/souravsingh.jpg";
 import logo from "../assets/logo.png";
+import diwaliPhoto from "../assets/diwaliPhoto.jpg";
+import maaKali from "../assets/maaKali.jpg";
+import diwaliBackground from "../assets/diwaliBackground.png";
 
 export default function LandingPage() {
   const [isVisible, setIsVisible] = useState(false);
@@ -461,6 +464,74 @@ export default function LandingPage() {
             </div>
           </div>
         </header>
+
+        {/* Diwali Wishes Section */}
+        <section className="py-10 sm:py-14 md:py-16 relative overflow-hidden ring-1 ring-accent/30">
+          {/* Background Image */}
+          <div className="absolute inset-0 z-0">
+            <Image
+              src={diwaliBackground}
+              alt="Diwali festive background"
+              fill
+              className="object-cover "
+              priority={false}
+            />
+            <div className="absolute inset-0 bg-gradient-to-br from-accent/20 via-primary/10 to-secondary/20"></div>
+            <div className="absolute inset-0"></div>
+          </div>
+
+          <div className="container mx-auto px-2 sm:px-4 relative z-10">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 md:gap-10 items-center">
+              <div className="order-2 lg:order-1 space-y-3 sm:space-y-4 reveal-on-scroll opacity-0 translate-y-6 transition-all duration-700">
+                <Badge className="bg-accent text-accent-foreground border-0 text-sm sm:text-base px-4 py-2 w-max shadow-lg">
+                  Shubh Deepavali
+                </Badge>
+                <h2 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl font-bold text-balance text-white drop-shadow-lg">
+                  Warm wishes for a bright and prosperous Diwali
+                </h2>
+                <p className="text-white/90 text-base sm:text-lg md:text-2xl lg:text-3xl xl:text-4xl leading-relaxed drop-shadow-md">
+                  May the festival of lights bring joy, success, and new
+                  beginnings to you and your family. Team{" "}
+                  <span className="font-semibold text-accent">
+                    3rd Eye Debt Management Services
+                  </span>{" "}
+                  wishes you happiness, health, and prosperity.
+                </p>
+
+                <div className="flex flex-wrap gap-3 sm:gap-4">
+                  <span className="inline-flex items-center rounded-full bg-primary text-primary-foreground px-4 py-2 text-xs sm:text-sm shadow-lg hover:scale-105 transition-transform">
+                    Happy Diwali
+                  </span>
+                  <span className="inline-flex items-center rounded-full bg-secondary text-secondary-foreground px-4 py-2 text-xs sm:text-sm shadow-lg hover:scale-105 transition-transform">
+                    Joyful Kali Puja
+                  </span>
+                </div>
+              </div>
+              <div className="order-1 lg:order-2 grid grid-cols-2 gap-3 sm:gap-4 md:gap-6 reveal-on-scroll opacity-0 translate-y-6 transition-all duration-700">
+                <div className="relative aspect-[4/5] rounded-2xl overflow-hidden ring-2 ring-accent/50 shadow-xl hover:shadow-2xl transition-all duration-300">
+                  <Image
+                    src={maaKali}
+                    alt="Maa Kali festive portrait"
+                    fill
+                    sizes="(max-width: 640px) 50vw, (max-width: 1024px) 40vw, 30vw"
+                    className="object-cover hover:scale-105 transition-transform duration-300"
+                    priority={false}
+                  />
+                </div>
+                <div className="relative aspect-[4/5] rounded-2xl overflow-hidden ring-2 ring-accent/50 shadow-xl hover:shadow-2xl transition-all duration-300">
+                  <Image
+                    src={diwaliPhoto}
+                    alt="Diwali diyas glowing with festive lights"
+                    fill
+                    sizes="(max-width: 640px) 50vw, (max-width: 1024px) 40vw, 30vw"
+                    className="object-cover hover:scale-105 transition-transform duration-300"
+                    priority={false}
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
 
         {/* Services Section */}
         <section className="py-14 sm:py-20 bg-primary text-primary-foreground">
