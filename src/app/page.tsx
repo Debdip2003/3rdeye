@@ -473,7 +473,7 @@ export default function LandingPage() {
               src={diwaliBackground}
               alt="Diwali festive background"
               fill
-              className="object-cover "
+              className="object-cover opacity-50"
               priority={false}
             />
             <div className="absolute inset-0 bg-gradient-to-br from-accent/20 via-primary/10 to-secondary/20"></div>
