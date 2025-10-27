@@ -372,6 +372,13 @@ export default function LandingPage() {
     ],
   };
 
+  const externalLinks = {
+    slice:
+      "https://ind01.safelinks.protection.outlook.com/?url=http%3A%2F%2Fsliceit.com%2F&data=05%7C02%7C3rdeyedebt.collections%40slicebank.com%7C69c13374cb0849168b9a08de12f08d93%7Cfd56b8c4b9984881b53ea1fc5a9c600e%7C0%7C0%7C638969021526326848%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=76cjZ5g%2Bl2sbG2M53vYNosrnNFXjUameEq%2BRZ4gR7Cg%3D&reserved=0", // replace with actual Slice URL if different
+    rbiSachet:
+      "https://ind01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fsachet.rbi.org.in%2F&data=05%7C02%7C3rdeyedebt.collections%40slicebank.com%7C69c13374cb0849168b9a08de12f08d93%7Cfd56b8c4b9984881b53ea1fc5a9c600e%7C0%7C0%7C638969021526345132%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=qGtY0FPLfqfZhkVq9IQdddtqzZNttA279mZjFOLqc0s%3D&reserved=0", // replace with the other target website
+  };
+
   return (
     <>
       <script
@@ -962,6 +969,7 @@ export default function LandingPage() {
         </section>
 
         {/* Get In Touch Section */}
+        {/* Get In Touch Section */}
         <section className="py-14 sm:py-20 bg-gradient-to-br from-primary to-secondary text-primary-foreground">
           <div className="container mx-auto px-2 sm:px-4">
             <div className="text-center mb-12 sm:mb-16">
@@ -1045,6 +1053,45 @@ export default function LandingPage() {
                       response.3edms.ss@gmail.com
                     </span>
                   </Button>
+                </div>
+
+                {/* External links provision: Slice + Rbi Sachet*/}
+                <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 md:gap-6 justify-center items-center mt-3">
+                  <a
+                    href={externalLinks.slice}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Visit Slice (opens in a new tab)"
+                    className="w-full sm:w-auto"
+                  >
+                    <Button
+                      size="lg"
+                      className="text-base sm:text-lg md:text-xl px-6 sm:px-8 md:px-10 py-4 sm:py-5 md:py-6 w-full sm:w-auto bg-card text-primary hover:bg-card/90 shadow-xl border-0"
+                    >
+                      <span className="mr-2 sm:mr-3">🔗</span>
+                      <span className="break-all text-xs sm:text-sm md:text-base">
+                        Visit Slice
+                      </span>
+                    </Button>
+                  </a>
+
+                  <a
+                    href={externalLinks.rbiSachet}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Visit RBI Sachet (opens in a new tab)"
+                    className="w-full sm:w-auto"
+                  >
+                    <Button
+                      size="lg"
+                      className="text-base sm:text-lg md:text-xl px-6 sm:px-8 md:px-10 py-4 sm:py-5 md:py-6 w-full sm:w-auto bg-card text-primary hover:bg-card/90 shadow-xl border-0"
+                    >
+                      <span className="mr-2 sm:mr-3">🔗</span>
+                      <span className="break-all text-xs sm:text-sm md:text-base">
+                        Visit RBI Sachet
+                      </span>
+                    </Button>
+                  </a>
                 </div>
               </div>
             </div>
