@@ -378,7 +378,7 @@ export default function LandingPage() {
     {
       id:1,
       title: "Slice",
-      icon: "/slicelogo.png",
+      icon: "/sliceLogo.png",
       link:  "https://ind01.safelinks.protection.outlook.com/?url=http%3A%2F%2Fsliceit.com%2F&data=05%7C02%7C3rdeyedebt.collections%40slicebank.com%7C69c13374cb0849168b9a08de12f08d93%7Cfd56b8c4b9984881b53ea1fc5a9c600e%7C0%7C0%7C638969021526326848%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=76cjZ5g%2Bl2sbG2M53vYNosrnNFXjUameEq%2BRZ4gR7Cg%3D&reserved=0",
     },
        {
