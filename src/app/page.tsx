@@ -56,6 +56,8 @@ import logo from "../assets/logo.png";
 import diwaliPhoto from "../assets/diwaliPhoto.jpg";
 import maaKali from "../assets/maaKali.jpg";
 import diwaliBackground from "../assets/diwaliBackground.png";
+// import sliceLogo from "/sliceLogo.png"
+// import rbisachetLogo from "/rbisachetLogo.png"
 
 export default function LandingPage() {
   const [isVisible, setIsVisible] = useState(false);
@@ -372,12 +374,27 @@ export default function LandingPage() {
     ],
   };
 
-  const externalLinks = {
-    slice:
-      "https://ind01.safelinks.protection.outlook.com/?url=http%3A%2F%2Fsliceit.com%2F&data=05%7C02%7C3rdeyedebt.collections%40slicebank.com%7C69c13374cb0849168b9a08de12f08d93%7Cfd56b8c4b9984881b53ea1fc5a9c600e%7C0%7C0%7C638969021526326848%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=76cjZ5g%2Bl2sbG2M53vYNosrnNFXjUameEq%2BRZ4gR7Cg%3D&reserved=0", // replace with actual Slice URL if different
-    rbiSachet:
-      "https://ind01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fsachet.rbi.org.in%2F&data=05%7C02%7C3rdeyedebt.collections%40slicebank.com%7C69c13374cb0849168b9a08de12f08d93%7Cfd56b8c4b9984881b53ea1fc5a9c600e%7C0%7C0%7C638969021526345132%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=qGtY0FPLfqfZhkVq9IQdddtqzZNttA279mZjFOLqc0s%3D&reserved=0", // replace with the other target website
-  };
+  const externalLinks = [
+    {
+      id:1,
+      title: "Slice",
+      icon: "/slicelogo.png",
+      link:  "https://ind01.safelinks.protection.outlook.com/?url=http%3A%2F%2Fsliceit.com%2F&data=05%7C02%7C3rdeyedebt.collections%40slicebank.com%7C69c13374cb0849168b9a08de12f08d93%7Cfd56b8c4b9984881b53ea1fc5a9c600e%7C0%7C0%7C638969021526326848%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=76cjZ5g%2Bl2sbG2M53vYNosrnNFXjUameEq%2BRZ4gR7Cg%3D&reserved=0",
+    },
+       {
+      id:2,
+      title: "RBI Sachet",
+      icon: "/rbisachetLogo.png",
+      link:  "https://ind01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fsachet.rbi.org.in%2F&data=05%7C02%7C3rdeyedebt.collections%40slicebank.com%7C69c13374cb0849168b9a08de12f08d93%7Cfd56b8c4b9984881b53ea1fc5a9c600e%7C0%7C0%7C638969021526345132%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=qGtY0FPLfqfZhkVq9IQdddtqzZNttA279mZjFOLqc0s%3D&reserved=0",
+    },
+  ]
+
+    
+    // slice:
+    //   "https://ind01.safelinks.protection.outlook.com/?url=http%3A%2F%2Fsliceit.com%2F&data=05%7C02%7C3rdeyedebt.collections%40slicebank.com%7C69c13374cb0849168b9a08de12f08d93%7Cfd56b8c4b9984881b53ea1fc5a9c600e%7C0%7C0%7C638969021526326848%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=76cjZ5g%2Bl2sbG2M53vYNosrnNFXjUameEq%2BRZ4gR7Cg%3D&reserved=0", // replace with actual Slice URL if different
+    // rbiSachet:
+    //   "https://ind01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fsachet.rbi.org.in%2F&data=05%7C02%7C3rdeyedebt.collections%40slicebank.com%7C69c13374cb0849168b9a08de12f08d93%7Cfd56b8c4b9984881b53ea1fc5a9c600e%7C0%7C0%7C638969021526345132%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=qGtY0FPLfqfZhkVq9IQdddtqzZNttA279mZjFOLqc0s%3D&reserved=0", // replace with the other target website
+  
 
   return (
     <>
@@ -572,6 +589,45 @@ export default function LandingPage() {
             </div>
           </div>
         </section>
+
+
+{/* our sponsor */}
+     <section className="py-14 sm:py-20  bg-muted/20">
+  <div className="container mx-auto px-2 sm:px-4">
+    <h2 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl font-bold mb-8 sm:mb-12 md:mb-16 text-center">
+      Our Sponsors
+    </h2>
+
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8">
+      {externalLinks.map((link) => (
+        <a
+          key={link.id}
+          href={link.link}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="block"
+        >
+          <Card className="bg-card">
+            <CardHeader className="flex flex-col items-center">
+              <Image
+                src={link.icon}
+                alt={link.title}
+                width={100}
+                height={100}
+                unoptimized
+                className="w-20 h-20 object-contain mb-4 bg-transparent"
+              />
+               <CardTitle className="text-2xl font-bold text-primary">
+                      {link.title}
+                    </CardTitle>
+            </CardHeader>
+          </Card>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>
+
 
         {/* Company Profile Section */}
         <section className="py-14 sm:py-20 bg-muted/20">
@@ -1056,7 +1112,7 @@ export default function LandingPage() {
                 </div>
 
                 {/* External links provision: Slice + Rbi Sachet*/}
-                <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 md:gap-6 justify-center items-center mt-3">
+                {/* <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 md:gap-6 justify-center items-center mt-3">
                   <a
                     href={externalLinks.slice}
                     target="_blank"
@@ -1092,7 +1148,7 @@ export default function LandingPage() {
                       </span>
                     </Button>
                   </a>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
