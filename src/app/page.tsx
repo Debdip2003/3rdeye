@@ -673,16 +673,15 @@ export default function LandingPage() {
                         Corporate Office:
                       </p>
                       <p className="text-muted-foreground text-sm sm:text-base">
-                        25A/1 K P ROY LANE, NEAR MUTHOOT FINANCE
-                        Hospital, Kolkata- 700031
+                        25A/1 K P ROY LANE 2nd 3rd and 4th FLOOR, NEAR MUTHOOT FINANCE, Kolkata- 700031
                       </p>
                     </div>
                     <div>
                       <p className="font-semibold text-sm sm:text-base">
-                        Registered Office:
+                        Registered Office (Same as Corporate Office):
                       </p>
                       <p className="text-muted-foreground text-sm sm:text-base">
-                        375, Rajdanga Sarat Park, Kolkata – 700107
+                        25A/1 K P ROY LANE 2nd 3rd and 4th FLOOR, NEAR MUTHOOT FINANCE, Kolkata- 700031
                       </p>
                     </div>
                   </CardContent>
@@ -1059,7 +1058,7 @@ export default function LandingPage() {
                   </CardHeader>
                   <CardContent className="p-4 sm:p-6 pt-0">
                     <p className="text-sm sm:text-base md:text-lg">
-                      25A/1 K P ROY LANE
+                      25A/1 K P ROY LANE 2nd 3rd and 4th FLOOR
                     </p>
                     <p className="text-sm sm:text-base md:text-lg">
                       NEAR MUTHOOT FINANCE, Kolkata - 700031
@@ -1074,16 +1073,16 @@ export default function LandingPage() {
                   <CardHeader className="p-4 sm:p-6">
                     <CardTitle className="flex items-center text-lg sm:text-xl md:text-2xl">
                       <Building2 className="mr-2 sm:mr-3 h-5 w-5 sm:h-6 sm:w-6 flex-shrink-0" />
-                      Registered Office
+                      Registered Office (Same as Corporate Office)
                     </CardTitle>
                     <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary via-accent to-secondary" />
                   </CardHeader>
                   <CardContent className="p-4 sm:p-6 pt-0">
                     <p className="text-sm sm:text-base md:text-lg">
-                      375, Rajdanga Sarat Park
+                      25A/1 K P ROY LANE 2nd 3rd and 4th FLOOR, NEAR MUTHOOT FINANCE
                     </p>
                     <p className="text-sm sm:text-base md:text-lg">
-                      Kolkata - 700107
+                      Kolkata - 700031
                     </p>
                   </CardContent>
                 </Card>
