@@ -56,6 +56,7 @@ import logo from "../assets/logo.png";
 import diwaliPhoto from "../assets/diwaliPhoto.jpg";
 import maaKali from "../assets/maaKali.jpg";
 import diwaliBackground from "../assets/diwaliBackground.png";
+import kotakBankLogo from "../assets/kotakBankLogo.png";
 // import sliceLogo from "/sliceLogo.png"
 // import rbisachetLogo from "/rbisachetLogo.png"
 
@@ -271,9 +272,9 @@ export default function LandingPage() {
     address: {
       "@type": "PostalAddress",
       streetAddress:
-        "169, Rajdanga Main Road, 3rd Floor, Near Motherhood Hospital",
+        "25A/1 K P ROY LANE, NEAR MUTHOOT FINANCE",
       addressLocality: "Kolkata",
-      postalCode: "700107",
+      postalCode: "700031",
       addressRegion: "West Bengal",
       addressCountry: "IN",
     },
@@ -386,6 +387,12 @@ export default function LandingPage() {
       title: "RBI Sachet",
       icon: "/rbisachetLogo.png",
       link:  "https://ind01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fsachet.rbi.org.in%2F&data=05%7C02%7C3rdeyedebt.collections%40slicebank.com%7C69c13374cb0849168b9a08de12f08d93%7Cfd56b8c4b9984881b53ea1fc5a9c600e%7C0%7C0%7C638969021526345132%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=qGtY0FPLfqfZhkVq9IQdddtqzZNttA279mZjFOLqc0s%3D&reserved=0",
+    },
+    {
+      id: 3,
+      title: "Kotak Mahindra Bank",
+      icon: kotakBankLogo,
+      link: "",
     },
   ]
 
@@ -666,8 +673,8 @@ export default function LandingPage() {
                         Corporate Office:
                       </p>
                       <p className="text-muted-foreground text-sm sm:text-base">
-                        169, Rajdanga Main Road, 3rd Floor, Near Motherhood
-                        Hospital, Kolkata- 700107
+                        25A/1 K P ROY LANE, NEAR MUTHOOT FINANCE
+                        Hospital, Kolkata- 700031
                       </p>
                     </div>
                     <div>
@@ -1052,10 +1059,10 @@ export default function LandingPage() {
                   </CardHeader>
                   <CardContent className="p-4 sm:p-6 pt-0">
                     <p className="text-sm sm:text-base md:text-lg">
-                      169, Rajdanga Main Road, 3rd Floor
+                      25A/1 K P ROY LANE
                     </p>
                     <p className="text-sm sm:text-base md:text-lg">
-                      Near Motherhood Hospital, Kolkata - 700107
+                      NEAR MUTHOOT FINANCE, Kolkata - 700031
                     </p>
                   </CardContent>
                 </Card>
